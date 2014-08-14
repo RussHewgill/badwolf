@@ -83,13 +83,15 @@ let s:bwc.dalespale = ['fade3e', 221]
 let s:bwc.dirtyblonde = ['f4cf86', 222]
 
 " Delicious, chewy red from Made of Code for the poppiest highlights.
-let s:bwc.taffy = ['ff2c4b', 196]
+let s:bwc.taffy = ['E41835', 196]
+" ff2c4b
 
 " Another chewy accent, but use sparingly!
 let s:bwc.saltwatertaffy = ['8cffba', 121]
 
 " The star of the show comes straight from Made of Code.
-let s:bwc.tardis = ['0a9dff', 39]
+let s:bwc.tardis = ['4FC6EF', 39]
+"0a9dff
 
 " This one's from Mustang, not Florida!
 let s:bwc.orange = ['ffa724', 214]
@@ -98,7 +100,8 @@ let s:bwc.orange = ['ffa724', 214]
 let s:bwc.lime = ['aeee00', 154]
 
 " Rose's dress in The Idiot's Lantern.
-let s:bwc.dress = ['ff9eb8', 211]
+"let s:bwc.dress = ['ff9eb8', 211]
+let s:bwc.dress = ['AE81FF', 211]
 
 " Another play on the brown from Clouds Midnight.  I love that color.
 let s:bwc.toffee = ['b88853', 137]
@@ -191,7 +194,7 @@ call s:HL('TabLine', 'plain', s:tabline, 'none')
 call s:HL('TabLineFill', 'plain', s:tabline, 'none')
 call s:HL('TabLineSel', 'coal', 'tardis', 'none')
 
-call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
+call s:HL('MatchParen', 'orange', 'darkgravel', 'bold')
 
 call s:HL('NonText',    'deepgravel', 'bg')
 call s:HL('SpecialKey', 'deepgravel', 'bg')
@@ -200,7 +203,7 @@ call s:HL('Visual',    '',  'deepgravel')
 call s:HL('VisualNOS', '',  'deepgravel')
 
 call s:HL('Search',    'coal', 'dalespale', 'bold')
-call s:HL('IncSearch', 'coal', 'tardis',    'bold')
+call s:HL('IncSearch', 'coal', 'dalespale', 'bold')
 
 call s:HL('Underlined', 'fg', '', 'underline')
 
@@ -244,7 +247,7 @@ call s:HL('iCursor', 'coal', 'tardis', 'none')
 call s:HL('Special', 'plain')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
-call s:HL('Comment',        'gravel')
+call s:HL('Comment',        'lightgravel')
 call s:HL('Todo',           'snow', 'bg', 'bold')
 call s:HL('SpecialComment', 'snow', 'bg', 'bold')
 
@@ -255,13 +258,13 @@ call s:HL('String', 'dirtyblonde')
 call s:HL('Statement',   'taffy', '', 'bold')
 call s:HL('Keyword',     'taffy', '', 'bold')
 call s:HL('Conditional', 'taffy', '', 'bold')
-call s:HL('Operator',    'taffy', '', 'none')
+call s:HL('Operator',    'taffy', '', 'bold')
 call s:HL('Label',       'taffy', '', 'none')
 call s:HL('Repeat',      'taffy', '', 'none')
 
 " Functions and variable declarations are orange, because plain looks weird.
-call s:HL('Identifier', 'orange', '', 'none')
-call s:HL('Function',   'orange', '', 'none')
+call s:HL('Identifier', 'lime', '', 'none')
+call s:HL('Function',   'lime', '', 'none')
 
 " Preprocessor stuff is lime, to make it pop.
 "
@@ -269,7 +272,7 @@ call s:HL('Function',   'orange', '', 'none')
 " grouped together at the beginning of a file.  If they're in the middle of some
 " other code they should stand out, because something tricky is
 " probably going on.
-call s:HL('PreProc',   'lime', '', 'none')
+call s:HL('PreProc',   'dalespale', '', 'none')
 call s:HL('Macro',     'lime', '', 'none')
 call s:HL('Define',    'lime', '', 'none')
 call s:HL('PreCondit', 'lime', '', 'bold')
@@ -618,6 +621,17 @@ call s:HL('pythonPrecondit',   'lime', '', 'none')
 call s:HL('pythonDecorator',   'taffy', '', 'none')
 call s:HL('pythonRun',         'gravel', '', 'bold')
 call s:HL('pythonCoding',      'gravel', '', 'bold')
+
+" }}}
+" Haskell {{{
+
+let g:hs_highlight_boolean = 1
+call s:HL('hsType',         'tardis')
+call s:HL('hsTypedef',      'tardis')
+call s:HL('Boolean',        'dress', '', 'none')
+"call s:HL('hsStructure',    'dress', '', 'none')
+"make :: Bold and Orange
+"call s:HL('DoubColon',      'orange')  ",'', 'bold')
 
 " }}}
 " SLIMV {{{
